@@ -3,7 +3,7 @@ function Test() {
   const {createUser}=useFirebase()
     const onClickButton=()=>{
         console.log("On Click")
-        createUser('samridh@gmail.com','samridh@1234')
+        createUser('samridh@gmail.com','samridh@1234','samridh gupta')
     }
   return (<>
     <div>Test</div>
