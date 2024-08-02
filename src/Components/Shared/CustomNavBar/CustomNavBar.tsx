@@ -1,11 +1,12 @@
 import useCustomNavBar from "./Hook/useCustomNavBar"
+import Setting from "./component/Setting"
 import { Label } from "./helper/constant"
 export interface CustomNavBarProps{
     isTitle?:boolean
     isImage?:boolean
     isTitleLable?:boolean
     titleLable:string
-
+    
 } 
 function CustomNavBar({
     isTitle=true,
@@ -14,9 +15,8 @@ function CustomNavBar({
     titleLable=Label.TITLE_LABEL
 }:CustomNavBarProps) {
     const {handleLogoClick,renderAuthorizedLinks}=useCustomNavBar()
-    console.log("re",renderAuthorizedLinks)
   return (
-    <header className={`w-full flex flex-row`}>
+    <header className={`w-full flex flex-row items-start justify-between pt-0 px-0 pb-[11px]`}>
        {isTitle && <div
           className="mq450:w-[150px] w-[205px] flex flex-col items-start justify-start px-0 pb-0 box-border"
           onClick={handleLogoClick}
@@ -34,9 +34,8 @@ function CustomNavBar({
             <div className="self-stretch flex flex-row items-start justify-between shrink-0 gap-[20px]">
               {renderAuthorizedLinks}
             </div>
-          
         }
-
+        <Setting/>
     </header>
   )
 }

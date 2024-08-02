@@ -24,9 +24,9 @@ function SideBar() {
     //             return <Test/>
     //     }
     // }
-    const {renderPage,tab}=useSideBar()
+    let {renderPage,tab}=useSideBar()
   return (
-    <div>
+    <div className="mt-10">
         {
             SideBarElement.map((SideBar:SideElement)=>{
                 return (<div key={SideBar.title} 
