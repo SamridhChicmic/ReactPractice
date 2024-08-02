@@ -6,6 +6,7 @@ import Notification from '../Views/SideBar/componets/Notification';
 import Test from '../Components/TestingComponent/Test';
 function useSideBar() {
  const {tab}=useParams()
+ console.log("Side Bar tab",tab)
  const renderPage=()=>{
     switch (tab) {
         case PARAM_NAME.AGENCY:

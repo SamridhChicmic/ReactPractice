@@ -1,8 +1,12 @@
+import CustomNavBar from "../../Components/Shared/CustomNavBar"
 import { AppLayoutProps } from "../AppLayout.d"
 
 function PrivateLayout({children}:AppLayoutProps) {
   return (
-    <div>{children}</div>
+    <div className="flex flex-col">
+        <CustomNavBar/>
+        {children}
+    </div>
   )
 }
 
